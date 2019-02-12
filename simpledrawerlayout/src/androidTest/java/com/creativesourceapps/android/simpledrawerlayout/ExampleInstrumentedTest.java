@@ -1,4 +1,4 @@
-package com.apps.creativesource.featurenavigationview;
+package com.creativesourceapps.android.simpledrawerlayout;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
