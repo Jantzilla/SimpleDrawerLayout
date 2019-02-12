@@ -1,4 +1,4 @@
 package com.creativesourceapps.android.simpledrawerlayout;
 
-public class EasyNavigationView {
+public class SimpleDrawerLayout {
 }
