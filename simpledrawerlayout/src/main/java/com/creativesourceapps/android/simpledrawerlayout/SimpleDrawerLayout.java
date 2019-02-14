@@ -1,6 +1,7 @@
 package com.creativesourceapps.android.simpledrawerlayout;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.widget.DrawerLayout;
@@ -37,5 +38,7 @@ public class SimpleDrawerLayout extends DrawerLayout {
     @Override
     public void addView(View child, int index, ViewGroup.LayoutParams params) {
         super.addView(child, index, params);
+        TypedArray ta = child.getContext().obtainStyledAttributes(R.styleable.SimpleDrawerLayout);
+        ta.recycle();
     }
 }
