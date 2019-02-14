@@ -39,6 +39,7 @@ public class SimpleDrawerLayout extends DrawerLayout {
     public void addView(View child, int index, ViewGroup.LayoutParams params) {
         super.addView(child, index, params);
         TypedArray ta = child.getContext().obtainStyledAttributes(R.styleable.SimpleDrawerLayout);
+        boolean drawerItem = ta.getBoolean(R.styleable.SimpleDrawerLayout_drawerItem, false);
         ta.recycle();
     }
 }
