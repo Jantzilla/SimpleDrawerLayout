@@ -45,4 +45,16 @@ public class SimpleDrawerLayout extends DrawerLayout {
                 frameLayout.addView(child, index, params);
         }
     }
+
+    public class LayoutParams extends DrawerLayout.LayoutParams{
+
+
+        public LayoutParams(Context context, AttributeSet attrs) {
+            super(context, attrs);
+            TypedArray arr = context.obtainStyledAttributes(attrs, R.styleable.SimpleDrawerLayout_Layout);
+            drawerItem = arr.getBoolean(R.styleable.SimpleDrawerLayout_Layout_drawerItem,false);
+            arr.recycle();
+        }
+
+    }
 }
