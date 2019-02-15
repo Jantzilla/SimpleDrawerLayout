@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="SimpleDrawerLayout">
+    <declare-styleable name="SimpleDrawerLayout_Layout">
         <attr name="drawerItem" format="boolean"/>
     </declare-styleable>
 </resources>
