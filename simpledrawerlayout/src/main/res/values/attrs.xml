@@ -2,5 +2,6 @@
 <resources>
     <declare-styleable name="SimpleDrawerLayout_Layout">
         <attr name="drawerItem" format="boolean"/>
+        <attr name="menu" format="integer"/>
     </declare-styleable>
 </resources>
