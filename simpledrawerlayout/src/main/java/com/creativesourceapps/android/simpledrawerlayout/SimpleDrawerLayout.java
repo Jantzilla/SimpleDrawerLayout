@@ -13,6 +13,7 @@ import android.widget.FrameLayout;
 
 public class SimpleDrawerLayout extends DrawerLayout {
 
+    private boolean drawerItem;
     private FrameLayout frameLayout;
 
     public SimpleDrawerLayout(@NonNull Context context) {
@@ -37,9 +38,11 @@ public class SimpleDrawerLayout extends DrawerLayout {
 
     @Override
     public void addView(View child, int index, ViewGroup.LayoutParams params) {
-        super.addView(child, index, params);
-        TypedArray ta = child.getContext().obtainStyledAttributes(R.styleable.SimpleDrawerLayout);
-        boolean drawerItem = ta.getBoolean(R.styleable.SimpleDrawerLayout_drawerItem, false);
-        ta.recycle();
+        if(frameLayout == null){
+            super.addView(child, index, params);
+        } else {
+            if(drawerItem)
+                frameLayout.addView(child, index, params);
+        }
     }
 }
