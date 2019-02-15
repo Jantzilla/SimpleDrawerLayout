@@ -46,6 +46,23 @@ public class SimpleDrawerLayout extends DrawerLayout {
         }
     }
 
+    @Override
+    public ViewGroup.LayoutParams generateLayoutParams (AttributeSet attrs){
+        LayoutParams params = new SimpleDrawerLayout.LayoutParams(getContext(), attrs);
+        return params;
+    }
+
+    @Override
+    protected boolean checkLayoutParams (ViewGroup.LayoutParams p){
+        return p instanceof LayoutParams;
+    }
+
+    @Override
+    protected ViewGroup.LayoutParams generateDefaultLayoutParams (){
+        return new LayoutParams(getContext(), null);
+    }
+
+
     public class LayoutParams extends DrawerLayout.LayoutParams{
 
 
