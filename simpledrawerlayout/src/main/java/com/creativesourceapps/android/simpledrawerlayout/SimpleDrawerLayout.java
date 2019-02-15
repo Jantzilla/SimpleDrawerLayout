@@ -17,6 +17,7 @@ public class SimpleDrawerLayout extends DrawerLayout {
     private boolean drawerItem;
     private FrameLayout frameLayout;
     private NavigationView navigationView;
+    private int menuId;
 
     public SimpleDrawerLayout(@NonNull Context context) {
         super(context);
@@ -37,6 +38,14 @@ public class SimpleDrawerLayout extends DrawerLayout {
         LayoutInflater.from(context).inflate(R.layout.simple_drawer_layout, this, true);
         frameLayout = findViewById(R.id.fl_main);
         navigationView = findViewById(R.id.navigation);
+
+        if(set == null)
+            return;
+
+        TypedArray ta = context.obtainStyledAttributes(R.styleable.SimpleDrawerLayout_Layout);
+        menuId = ta.getInt(R.styleable.SimpleDrawerLayout_Layout_menu, -1);
+        ta.recycle();
+
     }
 
     @Override
