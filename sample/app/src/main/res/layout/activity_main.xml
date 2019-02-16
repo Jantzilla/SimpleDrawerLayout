@@ -7,6 +7,13 @@
     android:id="@+id/simple_drawer_layout"
     tools:context="com.creativesourceapps.android.app.MainActivity">
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar" />
+
     <LinearLayout
         android:id="@+id/ll_drawer_list"
         android:layout_width="match_parent"
