@@ -20,6 +20,7 @@ public class SimpleDrawerLayout extends DrawerLayout {
     private NavigationView navigationView;
     private int menuId = -1;
     private int layoutId = -1;
+    private DrawerLayout drawerLayout;
 
     public SimpleDrawerLayout(@NonNull Context context) {
         super(context);
@@ -40,6 +41,7 @@ public class SimpleDrawerLayout extends DrawerLayout {
         LayoutInflater.from(context).inflate(R.layout.simple_drawer_layout, this, true);
         frameLayout = findViewById(R.id.fl_main);
         navigationView = findViewById(R.id.navigation);
+        drawerLayout = findViewById(R.id.drawer_layout);
 
         if(set == null)
             return;
