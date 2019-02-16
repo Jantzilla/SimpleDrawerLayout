@@ -58,8 +58,12 @@ public class SimpleDrawerLayout extends DrawerLayout {
         if(frameLayout == null){
             super.addView(child, index, params);
         } else {
-            if(drawerItem)
-                navigationView.addView(child, index, params);
+            if(drawerItem) {
+                if(menuId > -1)
+                    navigationView.addHeaderView(child);
+                else
+                    navigationView.addView(child, index, params);
+            }
             else
                 frameLayout.addView(child, index, params);
         }
