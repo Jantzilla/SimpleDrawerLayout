@@ -1,10 +1,13 @@
 package com.creativesourceapps.android.app;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.view.GravityCompat;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
@@ -18,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
     private Fragment fragment;
     private SimpleDrawerLayout drawerLayout;
     private FragmentManager fragmentManager;
+    private Toolbar toolbar;
+    private ActionBar actionBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +34,11 @@ public class MainActivity extends AppCompatActivity {
         option_3 = findViewById(R.id.tv_option3);
         option_4 = findViewById(R.id.tv_option4);
         drawerLayout = findViewById(R.id.simple_drawer_layout);
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setHomeAsUpIndicator(R.drawable.menu);
 
         fragmentManager = getSupportFragmentManager();
 
@@ -91,5 +101,15 @@ public class MainActivity extends AppCompatActivity {
             view.setBackgroundColor(getResources().getColor(R.color.colorChecked));
             navigation = view;
         }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                drawerLayout.openDrawer(GravityCompat.START);
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
