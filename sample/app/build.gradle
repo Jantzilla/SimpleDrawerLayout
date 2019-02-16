@@ -1,4 +1,15 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.novoda.bintray-release'
+
+publish {
+    userOrg = 'creativesource'
+    repoName = 'SimpleDrawerLayout'
+    groupId = 'com.creativesource'
+    artifactId = 'simpledrawerlayout'
+    publishVersion = '0.1.0'
+    desc = 'Simplified & customizable Android DrawerLayout.'
+    website = 'https://github.com/Jantzilla/SimpleDrawerLayout'
+}
 
 android {
     compileSdkVersion 28
