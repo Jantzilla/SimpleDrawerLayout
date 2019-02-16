@@ -32,6 +32,11 @@ public class MainActivity extends AppCompatActivity {
 
         fragmentManager = getSupportFragmentManager();
 
+        navigation = option_1;
+        option_1.setBackgroundColor(getResources().getColor(R.color.colorChecked));
+        fragment = new FirstFragment();
+        fragmentManager.beginTransaction().add(R.id.fl_content_main, fragment).commit();
+
         option_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
