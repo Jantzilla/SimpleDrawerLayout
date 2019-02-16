@@ -1,4 +1,4 @@
-package com.creativesourceapps.android.simpledrawerlayout;
+package com.creativesource.simpledrawerlayout;
 
 import android.content.Context;
 import android.content.res.TypedArray;

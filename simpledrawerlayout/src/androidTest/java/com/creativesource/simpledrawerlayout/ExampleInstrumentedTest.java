@@ -1,4 +1,4 @@
-package com.creativesourceapps.android.app;
+package com.creativesource.simpledrawerlayout;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.apps.creativesource.app", appContext.getPackageName());
+        assertEquals("com.apps.creativesource.featurenavigationview.test", appContext.getPackageName());
     }
 }

@@ -1,4 +1,4 @@
-package com.creativesourceapps.android.simpledrawerlayout;
+package com.creativesource.simpledrawerlayout.app;
 
 import org.junit.Test;
 

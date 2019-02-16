@@ -1,4 +1,4 @@
-package com.creativesourceapps.android.app;
+package com.creativesource.simpledrawerlayout.app;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -11,7 +11,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-import com.creativesourceapps.android.simpledrawerlayout.SimpleDrawerLayout;
+import com.creativesource.simpledrawerlayout.SimpleDrawerLayout;
 
 public class MainActivity extends AppCompatActivity {
 

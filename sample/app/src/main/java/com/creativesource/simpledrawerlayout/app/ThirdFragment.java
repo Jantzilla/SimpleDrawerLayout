@@ -1,4 +1,4 @@
-package com.creativesourceapps.android.app;
+package com.creativesource.simpledrawerlayout.app;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
