@@ -17,7 +17,7 @@
         <TextView
             android:id="@+id/tv_header"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="230dp"
             android:gravity="center"
             android:background="@color/colorPrimary"
             android:textSize="32sp"
