@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="SimpleDrawerLayout_Layout">
+        <attr name="headerLayout" format="reference"/>
         <attr name="drawerItem" format="boolean"/>
         <attr name="menuRes" format="reference"/>
     </declare-styleable>
