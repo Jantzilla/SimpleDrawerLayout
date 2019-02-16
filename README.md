@@ -4,8 +4,7 @@ This library provides a way to create simple or complex drawer implementations i
 ![](static/demo.gif)
 
 ## How to
-#### ~Gradle~
-Due to JCenter publishing complications, this library's dependency artifact is currently unavailable.
+#### Gradle
 ```Gradle
 dependencies {
     implementation 'com.creativesource:simpledrawerlayout:0.1.0'
