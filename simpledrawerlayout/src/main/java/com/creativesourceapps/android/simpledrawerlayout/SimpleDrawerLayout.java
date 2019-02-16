@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,7 +18,7 @@ public class SimpleDrawerLayout extends DrawerLayout {
     private boolean drawerItem;
     private FrameLayout frameLayout;
     private NavigationView navigationView;
-    private int menuId;
+    private int menuId = -1;
 
     public SimpleDrawerLayout(@NonNull Context context) {
         super(context);
@@ -42,10 +43,14 @@ public class SimpleDrawerLayout extends DrawerLayout {
         if(set == null)
             return;
 
-        TypedArray ta = context.obtainStyledAttributes(R.styleable.SimpleDrawerLayout_Layout);
-        menuId = ta.getInt(R.styleable.SimpleDrawerLayout_Layout_menu, -1);
+        TypedArray ta = context.obtainStyledAttributes(set, R.styleable.SimpleDrawerLayout_Layout);
+        menuId = ta.getResourceId(R.styleable.SimpleDrawerLayout_Layout_menuRes, -1);
         ta.recycle();
 
+        if(menuId > -1) {
+            Log.d("SimpleDraerLayout", "Works");
+            navigationView.inflateMenu(menuId);
+        }
     }
 
     @Override
