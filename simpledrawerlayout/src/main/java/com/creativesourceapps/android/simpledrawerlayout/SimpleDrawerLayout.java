@@ -113,4 +113,9 @@ public class SimpleDrawerLayout extends DrawerLayout {
     public void closeDrawers() {
         drawerLayout.closeDrawers();
     }
+
+    @Override
+    public void openDrawer(int gravity) {
+        drawerLayout.openDrawer(gravity);
+    }
 }
