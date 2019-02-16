@@ -5,6 +5,7 @@ import android.content.res.TypedArray;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.NavigationView;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
@@ -46,6 +47,9 @@ public class SimpleDrawerLayout extends DrawerLayout {
         TypedArray ta = context.obtainStyledAttributes(set, R.styleable.SimpleDrawerLayout_Layout);
         menuId = ta.getResourceId(R.styleable.SimpleDrawerLayout_Layout_menuRes, -1);
         layoutId = ta.getResourceId(R.styleable.SimpleDrawerLayout_Layout_headerLayout, -1);
+        DrawerLayout.LayoutParams params = new DrawerLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.MATCH_PARENT);
+        params.gravity = ta.getInteger(R.styleable.SimpleDrawerLayout_Layout_drawerGravity, GravityCompat.START);
+        navigationView.setLayoutParams(params);
         ta.recycle();
 
         if(menuId > -1)
