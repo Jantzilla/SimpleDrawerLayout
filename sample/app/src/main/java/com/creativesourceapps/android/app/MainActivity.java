@@ -79,11 +79,11 @@ public class MainActivity extends AppCompatActivity {
 
         if(navigation == null) {
             navigation = view;
-            navigation.setBackgroundColor(Color.WHITE);
+            navigation.setBackgroundColor(getResources().getColor(R.color.colorChecked));
         }
         else {
-            navigation.setBackgroundColor(Color.DKGRAY);
-            view.setBackgroundColor(Color.WHITE);
+            navigation.setBackgroundColor(getResources().getColor(R.color.colorUnchecked));
+            view.setBackgroundColor(getResources().getColor(R.color.colorChecked));
             navigation = view;
         }
     }
