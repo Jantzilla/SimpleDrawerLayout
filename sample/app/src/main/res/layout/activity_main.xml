@@ -15,6 +15,7 @@
         app:drawerItem="true"
         tools:ignore="MissingPrefix">
         <TextView
+            android:id="@+id/tv_header"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:gravity="center"
@@ -22,6 +23,7 @@
             android:textSize="32sp"
             android:text="Header"/>
         <TextView
+            android:id="@+id/tv_option1"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
@@ -29,6 +31,7 @@
             android:background="@android:color/darker_gray"
             android:text="Text"/>
         <TextView
+            android:id="@+id/tv_option2"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
@@ -36,6 +39,7 @@
             android:background="@android:color/darker_gray"
             android:text="Text"/>
         <TextView
+            android:id="@+id/tv_option3"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
@@ -43,6 +47,7 @@
             android:background="@android:color/darker_gray"
             android:text="Text"/>
         <TextView
+            android:id="@+id/tv_option4"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
@@ -50,6 +55,7 @@
             android:background="@android:color/darker_gray"
             android:text="Text"/>
         <TextView
+            android:id="@+id/tv_option5"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
