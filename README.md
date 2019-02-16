@@ -5,6 +5,7 @@ This library provides a way to create simple or complex drawer implementations i
 
 ## How to
 #### ~Gradle~
+Due to JCenter publishing complications, this library's dependency artifact is currently unavailable.
 ```Gradle
 dependencies {
     implementation 'com.creativesource:simpledrawerlayout:0.1.0'
