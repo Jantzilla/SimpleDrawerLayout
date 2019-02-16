@@ -99,4 +99,8 @@ public class SimpleDrawerLayout extends DrawerLayout {
         }
 
     }
+
+    public void setNavigationItemSelectedListener(NavigationView.OnNavigationItemSelectedListener navigationListener) {
+        navigationView.setNavigationItemSelectedListener(navigationListener);
+    }
 }
